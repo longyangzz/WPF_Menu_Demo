@@ -1,0 +1,149 @@
+﻿<Window
+    x:Class="Dialog.DataImportMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    Width="670"
+    Height="700"
+    WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.08*" />
+                <RowDefinition Height="0.08*" />
+                <RowDefinition Height="0.26*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <Label Margin="5,0,0,0" Content="当前工程：" />
+                <Label
+                    x:Name="lbProject"
+                    Width="200"
+                    Margin="92,0,0,0"
+                    Foreground="#FF298C97" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Label Margin="5,0,0,0" Content="计算单元：" />
+                <ComboBox
+                    x:Name="rcbLargeWater"
+                    Width="250"
+                    Height="22"
+                    Margin="94,0,0,0"
+                    HorizontalAlignment="Left"
+                    DisplayMemberPath="Name"
+                    SelectedValue="0"
+                    SelectedValuePath="ID"
+                    Visibility="Collapsed" />
+                <TextBox
+                    x:Name="tbLargeWater"
+                    Width="250"
+                    Height="22"
+                    Margin="94,0,0,0"
+                    HorizontalAlignment="Left"
+                    Visibility="Visible" />
+                <RadioButton
+                    x:Name="rbInsert"
+                    Margin="5,0,0,0"
+                    VerticalAlignment="Center"
+                    Click="RadioButton_Click"
+                    Content="新增"
+                    GroupName="N"
+                    IsChecked="True"
+                    Tag="0" />
+                <RadioButton
+                    x:Name="rbUpdate"
+                    Margin="5,0,0,0"
+                    VerticalAlignment="Center"
+                    Click="RadioButton_Click"
+                    Content="更新"
+                    GroupName="N"
+                    IsChecked="False"
+                    Tag="1" />
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Vertical">
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="5" Content="流域边界导入：" />
+                    <TextBox
+                        x:Name="WataBoundTxt"
+                        Width="250"
+                        Height="22"
+                        Margin="65,0,0,0" />
+                    <Button
+                        x:Name="BtnWataBoundChoose"
+                        Width="60"
+                        Height="22"
+                        Margin="5"
+                        Click="RadButton_Click"
+                        Content="选择"
+                        Cursor="Hand" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="5" Content="土地利用：" />
+                    <TextBox
+                        x:Name="TDLYTxt"
+                        Width="250"
+                        Height="22"
+                        Margin="89,0,5,0" />
+                    <Button
+                        x:Name="BtnTDLYChoose"
+                        Width="60"
+                        Height="22"
+                        Margin="0,5"
+                        Click="RadButton_Click"
+                        Content="选择"
+                        Cursor="Hand" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="5" Content="土壤质地：" />
+                    <TextBox
+                        x:Name="ZBFGTxt"
+                        Width="250"
+                        Height="22"
+                        Margin="89,0,5,0" />
+                    <Button
+                        x:Name="BtnZBFGChoose"
+                        Width="60"
+                        Height="22"
+                        Margin="0,5"
+                        Click="RadButton_Click"
+                        Content="选择"
+                        Cursor="Hand" />
+                </StackPanel>
+                <Button
+                    x:Name="BtnImport"
+                    Width="60"
+                    Height="22"
+                    Margin="0,0,20,0"
+                    HorizontalAlignment="Right"
+                    Click="BtnImport_Click"
+                    Content="导入"
+                    Cursor="Hand" />
+            </StackPanel>
+            <ListBox
+                x:Name="ListLog"
+                Grid.Row="3"
+                Background="LightCyan"
+                BorderBrush="#FF298C97"
+                BorderThickness="1"
+                FontSize="14" />
+
+        </Grid>
+
+
+        <!--  蒙板  -->
+        <Grid Name="GridMatte" Visibility="Collapsed">
+            <Border
+                Margin="0"
+                Background="White"
+                Opacity="0.75" />
+            <StackPanel
+                Margin="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Grid x:Name="TimeGrid" />
+            </StackPanel>
+        </Grid>
+        <!--  蒙板  -->
+    </Grid>
+</Window>

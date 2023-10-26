@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Dialog;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -45,7 +46,9 @@ namespace WpfApp2
 
         private void Dialog_Selected(object sender, RoutedEventArgs e)
         {
-            int aa = 9;
+            DataImportMain dimport = new DataImportMain();
+            dimport.Owner = Application.Current.MainWindow;
+            dimport.ShowDialog();
         }
     }
 }
