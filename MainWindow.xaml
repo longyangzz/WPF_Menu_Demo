@@ -202,5 +202,6 @@
                 </ListView>
             </StackPanel>
         </Grid>
+        <Grid x:Name="GridMapContent" Margin="65,65,0,0" />
     </Grid>
 </Window>

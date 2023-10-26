@@ -9,9 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapsui" Version="4.1.0" />
+    <PackageReference Include="Mapsui.ArcGIS" Version="4.1.0" />
+    <PackageReference Include="Mapsui.Extensions" Version="4.1.0" />
+    <PackageReference Include="Mapsui.Nts" Version="4.1.0" />
+    <PackageReference Include="Mapsui.Wpf" Version="4.1.0" />
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.3.0" />
+    <PackageReference Include="NetTopologySuite" Version="2.5.0" />
   </ItemGroup>
 
 </Project>
