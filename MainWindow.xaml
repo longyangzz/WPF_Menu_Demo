@@ -81,7 +81,7 @@
             HorizontalAlignment="Left"
             Background="#FF00a6ac">
             <StackPanel>
-                <Grid Height="150" Background="White">
+                <Grid Height="60" Background="White">
                     <Button
                         x:Name="ButtonCloseMenu"
                         Width="60"
@@ -183,6 +183,20 @@
                                 Margin="20,10"
                                 VerticalAlignment="Center"
                                 Text="设置" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60" Selected="Dialog_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="25"
+                                Height="25"
+                                Margin="10"
+                                VerticalAlignment="Center"
+                                Kind="Done" />
+                            <TextBlock
+                                Margin="20,10"
+                                VerticalAlignment="Center"
+                                Text="对话框" />
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

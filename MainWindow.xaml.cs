@@ -42,5 +42,10 @@ namespace WpfApp2
         {
             DragMove();
         }
+
+        private void Dialog_Selected(object sender, RoutedEventArgs e)
+        {
+            int aa = 9;
+        }
     }
 }
