@@ -202,6 +202,10 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <Grid x:Name="GridMapContent" Margin="65,65,0,0" />
+        <Grid x:Name="GridMapContent" Margin="65,65,0,0" >
+            <!--//添加图片-->
+            <Image Source="/Image/backgroud.png" Stretch="Fill" />
+
+        </Grid>
     </Grid>
 </Window>

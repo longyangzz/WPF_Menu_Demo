@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\backgroud.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Mapsui" Version="4.1.0" />
     <PackageReference Include="Mapsui.ArcGIS" Version="4.1.0" />
     <PackageReference Include="Mapsui.Extensions" Version="4.1.0" />
@@ -18,6 +22,10 @@
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.3.0" />
     <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\backgroud.png" />
   </ItemGroup>
 
 </Project>
