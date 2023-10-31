@@ -15,7 +15,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Label Margin="5,0,0,0" Content="当前工程：" />
+                <Label Margin="5,0,0,0" Content="参数配置更新：" />
                 <Label
                     x:Name="lbProject"
                     Width="200"
@@ -23,7 +23,6 @@
                     Foreground="#FF298C97" />
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <Label Margin="5,0,0,0" Content="计算单元：" />
                 <ComboBox
                     x:Name="rcbLargeWater"
                     Width="250"
@@ -34,19 +33,12 @@
                     SelectedValue="0"
                     SelectedValuePath="ID"
                     Visibility="Collapsed" />
-                <TextBox
-                    x:Name="tbLargeWater"
-                    Width="250"
-                    Height="22"
-                    Margin="94,0,0,0"
-                    HorizontalAlignment="Left"
-                    Visibility="Visible" />
                 <RadioButton
                     x:Name="rbInsert"
                     Margin="5,0,0,0"
                     VerticalAlignment="Center"
                     Click="RadioButton_Click"
-                    Content="新增"
+                    Content="手动模式"
                     GroupName="N"
                     IsChecked="True"
                     Tag="0" />
@@ -55,15 +47,19 @@
                     Margin="5,0,0,0"
                     VerticalAlignment="Center"
                     Click="RadioButton_Click"
-                    Content="更新"
+                    Content="实时模式"
                     GroupName="N"
                     IsChecked="False"
                     Tag="1" />
             </StackPanel>
-            <StackPanel Grid.Row="2" Orientation="Vertical">
+            <StackPanel
+                Grid.Row="1"
+                Grid.RowSpan="3"
+                Margin="0,38,0,372"
+                Orientation="Vertical">
 
                 <StackPanel Orientation="Horizontal">
-                    <Label Margin="5" Content="流域边界导入：" />
+                    <Label Margin="5" Content="HSFX_COMPUTER_forecast：" />
                     <TextBox
                         x:Name="WataBoundTxt"
                         Width="250"
@@ -79,7 +75,7 @@
                         Cursor="Hand" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Margin="5" Content="土地利用：" />
+                    <Label Margin="5" Content="HSFX_ComputeUnit_forecast：" />
                     <TextBox
                         x:Name="TDLYTxt"
                         Width="250"
@@ -95,7 +91,7 @@
                         Cursor="Hand" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Margin="5" Content="土壤质地：" />
+                    <Label Margin="5" Content="IFMS_UNIT_ExpandInfo：" />
                     <TextBox
                         x:Name="ZBFGTxt"
                         Width="250"
@@ -110,12 +106,26 @@
                         Content="选择"
                         Cursor="Hand" />
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Margin="5" Content="UserSystemParamConfig：" />
+                    <TextBox
+                        x:Name="ZBFGTxt1"
+                        Width="250"
+                        Height="22"
+                        Margin="89,0,5,0" />
+                    <Button
+                        x:Name="BtnZBFGChoose1"
+                        Width="60"
+                        Height="22"
+                        Margin="0,5"
+                        Click="RadButton_Click"
+                        Content="选择"
+                        Cursor="Hand" />
+                </StackPanel>
                 <Button
                     x:Name="BtnImport"
                     Width="60"
                     Height="22"
-                    Margin="0,0,20,0"
-                    HorizontalAlignment="Right"
                     Click="BtnImport_Click"
                     Content="导入"
                     Cursor="Hand" />
@@ -123,6 +133,7 @@
             <ListBox
                 x:Name="ListLog"
                 Grid.Row="3"
+                Margin="0,117,0,0"
                 Background="LightCyan"
                 BorderBrush="#FF298C97"
                 BorderThickness="1"
